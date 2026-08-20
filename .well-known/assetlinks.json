@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "de.sebastiankring.pilzgebiete",
+      "sha256_cert_fingerprints": [
+        "58:FB:C5:C8:19:D6:87:53:D5:F7:7D:FB:5A:A7:45:A1:52:D0:77:50:03:62:11:40:E7:76:8D:13:59:85:DD:1F"
+      ]
+    }
+  }
+]
