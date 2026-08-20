@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "de.sebastiankring.pilzgebiete",
       "sha256_cert_fingerprints": [
-        "58:FB:C5:C8:19:D6:87:53:D5:F7:7D:FB:5A:A7:45:A1:52:D0:77:50:03:62:11:40:E7:76:8D:13:59:85:DD:1F"
+        "58:FB:C5:C8:19:D6:87:53:D5:F7:7D:FB:5A:A7:45:A1:52:D0:77:50:03:62:11:40:E7:76:8D:13:59:85:DD:1F",
+        "67:6C:2A:1F:8D:16:54:EB:4C:01:84:62:B1:2A:91:C8:A3:92:71:EB:F2:6C:27:7A:B8:88:DE:E0:6C:91:47:34"
       ]
     }
   }
