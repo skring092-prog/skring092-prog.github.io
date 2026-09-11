@@ -8,6 +8,15 @@
       "url": "https://pilzgebiete-app.de/caesium/",
       "imageUrl": "https://pilzgebiete-app.de/caesium/img/hero.jpg",
       "tag": "Waldwissen"
+    },
+    {
+      "id": "steinpilz-wachstum",
+      "title": "Wie Steinpilze wachsen",
+      "teaser": "Wie Wasser, Bäume und Wetter das Wachstum prägen.",
+      "publishedAt": "2026-09-11",
+      "url": "https://pilzgebiete-app.de/wachstum/",
+      "imageUrl": "https://pilzgebiete-app.de/wachstum/img/hero.jpg",
+      "tag": "Pilzwissen"
     }
   ]
 }
