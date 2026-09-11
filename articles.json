@@ -8,14 +8,6 @@
       "url": "https://pilzgebiete-app.de/caesium/",
       "imageUrl": "https://pilzgebiete-app.de/caesium/img/hero.jpg",
       "tag": "Waldwissen"
-    },
-    {
-      "id": "steinpilz-test",
-      "title": "Wie schnell wachsen Steinpilze?",
-      "teaser": "Temporärer QA-Testeintrag, kein veröffentlichter Artikel.",
-      "publishedAt": "2026-09-11",
-      "url": "https://pilzgebiete-app.de/",
-      "tag": "Pilzwissen"
     }
   ]
 }
