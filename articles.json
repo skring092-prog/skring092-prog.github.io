@@ -1,0 +1,13 @@
+{
+  "articles": [
+    {
+      "id": "caesium",
+      "title": "Cäsium in Pilzen",
+      "teaser": "Messwerte verständlich eingeordnet.",
+      "publishedAt": "2026-09-04",
+      "url": "https://pilzgebiete-app.de/caesium/",
+      "imageUrl": "https://pilzgebiete-app.de/caesium/img/hero.jpg",
+      "tag": "Waldwissen"
+    }
+  ]
+}
