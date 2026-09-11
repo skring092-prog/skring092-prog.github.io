@@ -389,6 +389,15 @@
   .wisdom figure{margin:0}
   .wisdom img{display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:20px; box-shadow:0 20px 48px rgba(0,0,0,.3)}
   @media (prefers-reduced-motion: reduce){ .wisdom .wbtn{transition:none} }
+  .wisdom.light{background:var(--paper); color:var(--ink)}
+  .wisdom.light .wgrid{grid-template-columns:.9fr 1.1fr}
+  @media (max-width:880px){ .wisdom.light .wgrid{grid-template-columns:1fr} }
+  .wisdom.light h2{color:var(--ink)}
+  .wisdom.light p{color:var(--ink-soft)}
+  .wisdom.light .badge{color:#faf7ef; background:var(--forest)}
+  .wisdom.light .wbtn{background:var(--forest); color:#faf7ef; box-shadow:0 12px 30px rgba(12,40,30,.18)}
+  .wisdom.light .src{color:var(--ink-soft); border-top-color:var(--line)}
+  .wisdom.light img{box-shadow:0 20px 48px rgba(12,40,30,.18)}
 </style>
 
 <section class="wisdom">
@@ -405,6 +414,24 @@
       <figure>
         <img src="/caesium/img/hero.jpg" alt="Röhrlinge im Moospolster eines Fichtenwaldes" width="1600" height="1200" loading="lazy" decoding="async">
       </figure>
+    </div>
+  </div>
+</section>
+
+<section class="wisdom light">
+  <div class="wrap">
+    <div class="wgrid">
+      <figure>
+        <img src="/wachstum/img/hero.jpg" alt="Frischer Steinpilz mit braunem Hut und genetztem Stiel im Moos eines Nadelwaldes" width="1170" height="900" loading="lazy" decoding="async">
+      </figure>
+      <div>
+        <p class="badge">Waldwissen</p>
+        <h2>Über Nacht da — wie der Steinpilz das macht</h2>
+        <p>Ein Steinpilz wächst nicht wie ein Baum wächst. Er baut kaum neue Substanz auf, er füllt sich mit Wasser: Fruchtkörper bestehen zu rund 90 Prozent daraus, und der Pilz zieht es osmotisch aus dem Geflecht im Boden.</p>
+        <p>Wir haben zusammengetragen, was dazu tatsächlich gemessen wurde: wie schnell ein Fruchtkörper zulegt, warum das Bestandsalter das Tempo beeinflusst, was zehn Jahre Zählung in einem deutschen Buchenwald über den Auslöser sagen — und warum der Regen von gestern weniger erklärt, als alle denken.</p>
+        <a class="wbtn" href="/wachstum/">Zum ganzen Beitrag →</a>
+        <p class="src">Grundlage sind Feldstudien aus Deutschland, Spanien und der Schweiz sowie Übersichtsarbeiten zur Wasserphysiologie von Pilzen. Jede Zahl auf der Seite ist mit ihrer Quelle verlinkt.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -462,7 +489,7 @@
       </div>
       <div>
         <h3>Waldwissen</h3>
-        <p style="margin:0"><a href="/caesium/">Cäsium in Wildpilzen</a></p>
+        <p style="margin:0"><a href="/caesium/">Cäsium in Wildpilzen</a><br><a href="/wachstum/">Wie Steinpilze wachsen</a></p>
       </div>
       <div>
         <h3>Rechtliches</h3>
