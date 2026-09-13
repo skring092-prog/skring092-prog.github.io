@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Screenshot comparison — Pilzgebiete / Mykotop</title>
+  <meta name="description" content="Side-by-side screenshots comparing product structure, functional organization and user flow.">
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202723; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.5; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 40px 0 56px; }
+    h1 { margin: 0 0 16px; font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; letter-spacing: -.025em; }
+    header p { max-width: 850px; margin: 12px 0; }
+    .guide { color: #58625c; font-size: .9rem; }
+    a { color: #205e48; text-underline-offset: 3px; }
+    a:focus-visible, .pair-scroll:focus-visible { outline: 3px solid #205e48; outline-offset: 4px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 24px; font-size: .95rem; }
+    section { margin-top: 44px; padding-top: 24px; border-top: 1px solid #dce1dd; scroll-margin-top: 20px; }
+    h2 { margin: 0 0 20px; font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.3; }
+    .pair-scroll { overflow-x: auto; padding: 4px 4px 12px; }
+    .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; min-width: 640px; }
+    figure { margin: 0; min-width: 0; }
+    figcaption { min-height: 72px; margin-bottom: 12px; }
+    .app-name { display: block; font-size: 1.2rem; font-weight: 700; }
+    .app-subtitle { display: block; font-size: .9rem; color: #58625c; }
+    .capture-note { font-size: .8rem; font-weight: 400; color: #58625c; }
+    .screenshot { display: block; border: 1px solid #dce1dd; border-radius: 10px; overflow: hidden; background: #f7f7f4; }
+    img { display: block; width: 100%; height: auto; }
+    .observation { margin: 14px 4px 0; max-width: 950px; font-size: 1rem; }
+    footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #dce1dd; font-size: .85rem; }
+    @media (max-width: 680px) { main { width: calc(100% - 24px); padding-top: 24px; } .pair { gap: 16px; } section { margin-top: 32px; } }
+    @media print { main { width: 100%; padding: 0; } nav, .guide, footer { display: none; } section { break-before: page; border: 0; margin-top: 0; } .pair-scroll { overflow: visible; } .pair { min-width: 0; gap: 16px; } figcaption { min-height: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Screenshot comparison</h1>
+    <p>Screenshot comparison submitted in support of an App Review Guideline 4.1 report. The comparison focuses on product structure, functional organization and user flow.</p>
+    <p class="guide">Pilzgebiete on the left · Mykotop on the right. Screenshots are shown unaltered; two earlier Pilzgebiete captures are marked below. On narrow screens, swipe each pair horizontally. Select any screenshot to open its full-resolution image.</p>
+    <nav aria-label="Comparison sections">
+      <a href="#area-flow">1. Area flow</a>
+      <a href="#forest-map">2. Forest map</a>
+      <a href="#species">3. Species</a>
+      <a href="#saved-areas">4. Saved areas</a>
+      <a href="#premium">5. Premium / Pro</a>
+    </nav>
+  </header>
+
+  <section id="area-flow" aria-labelledby="area-heading">
+    <h2 id="area-heading">1. Area selection and detail flow</h2>
+    <div class="pair-scroll" tabindex="0" role="region" aria-label="Area flow screenshots, Pilzgebiete left and Mykotop right">
+      <div class="pair">
+        <figure>
+          <figcaption><span class="app-name">Pilzgebiete</span><span class="app-subtitle">– Pilze finden</span></figcaption>
+          <a class="screenshot" href="images/pilzgebiete-ohlstadt.png" aria-label="Open full-resolution Pilzgebiete area screenshot"><img src="images/pilzgebiete-ohlstadt.png" width="1170" height="2532" alt="Pilzgebiete: Waldhänge bei Ohlstadt selected on the map, with a B suitability grade, species and Gebiet ansehen action."></a>
+        </figure>
+        <figure>
+          <figcaption><span class="app-name">Mykotop</span><span class="app-subtitle">– Gebiete zum Pilze Sammeln</span></figcaption>
+          <a class="screenshot" href="images/mykotop-ohlstadt.png" aria-label="Open full-resolution Mykotop area screenshot"><img src="images/mykotop-ohlstadt.png" width="1170" height="2532" alt="Mykotop: Waldfläche bei Ohlstadt selected on the map, with an A suitability grade, species and save and navigation actions."></a>
+        </figure>
+      </div>
+    </div>
+    <p class="observation">Both selected-area views place a named forest area, a suitability grade, species information and further actions in a sheet over the map.</p>
+  </section>
+
+  <section id="forest-map" aria-labelledby="map-heading">
+    <h2 id="map-heading">2. Classified forest-area map</h2>
+    <div class="pair-scroll" tabindex="0" role="region" aria-label="Forest map screenshots, Pilzgebiete left and Mykotop right">
+      <div class="pair">
+        <figure>
+          <figcaption><span class="app-name">Pilzgebiete</span><span class="app-subtitle">– Pilze finden</span></figcaption>
+          <a class="screenshot" href="images/pilzgebiete-map.png" aria-label="Open full-resolution Pilzgebiete map screenshot"><img src="images/pilzgebiete-map.png" width="1170" height="2532" loading="lazy" alt="Pilzgebiete forest polygons around Murnau and Ohlstadt, with an A–C suitability legend."></a>
+        </figure>
+        <figure>
+          <figcaption><span class="app-name">Mykotop</span><span class="app-subtitle">– Gebiete zum Pilze Sammeln</span></figcaption>
+          <a class="screenshot" href="images/mykotop-map.png" aria-label="Open full-resolution Mykotop map screenshot"><img src="images/mykotop-map.png" width="1170" height="2532" loading="lazy" alt="Mykotop forest polygons around Murnau and Ohlstadt, with an A–F conditions legend."></a>
+        </figure>
+      </div>
+    </div>
+    <p class="observation">Both maps show coloured forest polygons around Murnau and Ohlstadt with a letter-based suitability legend.</p>
+  </section>
+
+  <section id="species" aria-labelledby="species-heading">
+    <h2 id="species-heading">3. Species-specific map functionality</h2>
+    <div class="pair-scroll" tabindex="0" role="region" aria-label="Species selection screenshots, Pilzgebiete left and Mykotop right">
+      <div class="pair">
+        <figure>
+          <figcaption><span class="app-name">Pilzgebiete <span class="capture-note">(earlier capture)</span></span><span class="app-subtitle">– Pilze finden</span></figcaption>
+          <a class="screenshot" href="images/pilzgebiete-species-filter.png" aria-label="Open full-resolution Pilzgebiete species filter screenshot"><img src="images/pilzgebiete-species-filter.png" width="1170" height="2532" loading="lazy" alt="Pilzgebiete Kartenfilter: Pilzart choices with Steinpilz selected and Premium aktiv shown."></a>
+        </figure>
+        <figure>
+          <figcaption><span class="app-name">Mykotop</span><span class="app-subtitle">– Gebiete zum Pilze Sammeln</span></figcaption>
+          <a class="screenshot" href="images/mykotop-species.png" aria-label="Open full-resolution Mykotop species selection screenshot"><img src="images/mykotop-species.png" width="1170" height="2532" loading="lazy" alt="Mykotop Pilze: Spezifische Arten für die Karte wählen, with switches beside individual mushroom species."></a>
+        </figure>
+      </div>
+    </div>
+    <p class="observation">Both interfaces provide named mushroom-species controls for selecting which species the map should represent.</p>
+  </section>
+
+  <section id="saved-areas" aria-labelledby="saved-heading">
+    <h2 id="saved-heading">4. Saved areas / personal mushroom locations</h2>
+    <div class="pair-scroll" tabindex="0" role="region" aria-label="Saved area screenshots, Pilzgebiete left and Mykotop right">
+      <div class="pair">
+        <figure>
+          <figcaption><span class="app-name">Pilzgebiete <span class="capture-note">(earlier capture)</span></span><span class="app-subtitle">– Pilze finden</span></figcaption>
+          <a class="screenshot" href="images/pilzgebiete-saved-areas.png" aria-label="Open full-resolution Pilzgebiete saved areas screenshot"><img src="images/pilzgebiete-saved-areas.png" width="1170" height="2532" loading="lazy" alt="Pilzgebiete Gespeicherte Gebiete empty state, explaining how to save an area from the map's detail view."></a>
+        </figure>
+        <figure>
+          <figcaption><span class="app-name">Mykotop</span><span class="app-subtitle">– Gebiete zum Pilze Sammeln</span></figcaption>
+          <a class="screenshot" href="images/mykotop-personal-area.png" aria-label="Open full-resolution Mykotop personal area screenshot"><img src="images/mykotop-personal-area.png" width="1170" height="2532" loading="lazy" alt="Mykotop Mein Bereich with Gespeicherte Gebiete, Gespeicherte Fundorte and an announced Pro offer."></a>
+        </figure>
+      </div>
+    </div>
+    <p class="observation">Both apps provide a dedicated saved-areas section for keeping forest areas selected from the map.</p>
+  </section>
+
+  <section id="premium" aria-labelledby="premium-heading">
+    <h2 id="premium-heading">5. Premium / Pro model</h2>
+    <div class="pair-scroll" tabindex="0" role="region" aria-label="Premium and Pro screenshots, Pilzgebiete left and Mykotop right">
+      <div class="pair">
+        <figure>
+          <figcaption><span class="app-name">Pilzgebiete</span><span class="app-subtitle">– Pilze finden</span></figcaption>
+          <a class="screenshot" href="images/pilzgebiete-premium.png" aria-label="Open full-resolution Pilzgebiete Premium screenshot"><img src="images/pilzgebiete-premium.png" width="1170" height="2532" loading="lazy" alt="Pilzgebiete Profil with free Light tier and Premium, a one-time purchase for species filters and premium zones."></a>
+        </figure>
+        <figure>
+          <figcaption><span class="app-name">Mykotop</span><span class="app-subtitle">– Gebiete zum Pilze Sammeln</span></figcaption>
+          <a class="screenshot" href="images/mykotop-personal-area.png" aria-label="Open full-resolution Mykotop Pro screenshot"><img src="images/mykotop-personal-area.png" width="1170" height="2532" loading="lazy" alt="Mykotop Mein Bereich with Pilzkarte Pro marked Coming Soon and listed offline and saved-location features."></a>
+        </figure>
+      </div>
+    </div>
+    <p class="observation">Both personal sections present a named upgrade tier with feature benefits, with Mykotop's Pro tier marked “Coming Soon”.</p>
+  </section>
+
+  <footer><a href="https://sites.google.com/view/pilzgebiete-rechtliches-suppor/impressum">Legal notice</a> · <a href="https://sites.google.com/view/pilzgebiete-rechtliches-suppor/datenschutz">Privacy</a></footer>
+</main>
+</body>
+</html>
