@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "pfifferling",
+      "title": "Der Echte Pfifferling",
+      "teaser": "Baumpartner, Boden und warum er so gut schmeckt.",
+      "publishedAt": "2026-09-16",
+      "url": "https://pilzgebiete-app.de/pfifferling/",
+      "imageUrl": "https://pilzgebiete-app.de/pfifferling/img/card.jpg",
+      "tag": "Pilzwissen"
+    },
+    {
       "id": "caesium",
       "title": "Cäsium in Pilzen",
       "teaser": "Messwerte verständlich eingeordnet.",
