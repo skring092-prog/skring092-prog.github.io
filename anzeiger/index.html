@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Steinpilz-Anzeiger: was funktioniert und was Mythos ist | Pilzgebiete</title>
+<link rel="canonical" href="https://pilzgebiete-app.de/anzeiger/">
+<meta name="description" content="Farn, Mehlräsling, Fliegenpilz, Moos: Welche Anzeiger für Steinpilze funktionieren, welche Mythen sind und warum vier verschiedene Steinpilzarten für widersprüchliche Faustregeln sorgen. Mit Quellen.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Steinpilz-Anzeiger: was funktioniert und was Mythos ist">
+<meta property="og:description" content="Anzeiger zeigen nie den Pilz — sie zeigen den Ort. Warum manche Faustregeln tragen und andere genau dann versagen, wenn man sich auf sie verlässt.">
+<meta property="og:url" content="https://pilzgebiete-app.de/anzeiger/">
+<meta property="og:image" content="https://pilzgebiete-app.de/anzeiger/img/hero-steinpilze.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --creme:#F8F3E7;
+  --creme-2:#F1EAD8;
+  --papier:#FFFDF8;
+  --salbei:#A9B89B;
+  --moos:#6C8A57;
+  --wald:#2B4230;
+  --wald-tief:#1E2F22;
+  --braun:#7A5A3C;
+  --ocker:#D6A03C;
+  --terra:#BC6A46;
+  --stein:#DCD7CB;
+  --text:#282C24;
+  --leise:#5C6156;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--creme);color:var(--text);
+  font-family:"Source Sans 3","Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  font-size:1.0625rem;line-height:1.7;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--terra)}
+.wrap{max-width:43rem;margin:0 auto;padding:0 1.25rem}
+.weit{max-width:56rem;margin:0 auto;padding:0 1.25rem}
+
+/* Navigation */
+.nav{border-bottom:1px solid var(--stein);background:var(--papier)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.85rem;padding-bottom:.85rem}
+.marke{font-family:"Bitter",Georgia,serif;font-weight:700;color:var(--wald);text-decoration:none;font-size:1.05rem}
+.marke span{color:var(--moos)}
+.nav a.zurueck{font-size:.88rem;color:var(--leise);text-decoration:none}
+
+/* Kopf */
+.kopf{padding:2.6rem 0 1.4rem}
+.rubrik{
+  display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.09em;
+  color:var(--moos);border:1px solid var(--salbei);border-radius:99px;
+  padding:.2rem .7rem;margin-bottom:1rem;text-transform:uppercase;
+}
+h1{
+  font-family:"Bitter","Iowan Old Style",Palatino,Georgia,serif;
+  font-size:clamp(2rem,7vw,3rem);line-height:1.08;font-weight:700;
+  color:var(--wald);margin:0 0 .85rem;letter-spacing:-.015em;
+}
+.vorspann{font-size:1.2rem;line-height:1.55;color:#3F463C;margin:0 0 1.5rem}
+.stand{font-size:.85rem;color:var(--leise);line-height:1.5;margin:0}
+
+/* Hero */
+.hero{margin:1.8rem 0 0}
+.hero img{border-radius:14px;box-shadow:0 14px 34px rgba(43,66,48,.16)}
+.bu{font-size:.88rem;color:var(--leise);line-height:1.55;margin:.7rem 0 0;font-style:italic}
+.bu b{font-style:normal;color:var(--braun)}
+
+/* Eilig-Box */
+.eilig{
+  background:var(--wald);color:#F0EBDC;border-radius:16px;
+  padding:1.5rem 1.4rem;margin:2.4rem 0 1rem;
+}
+.eilig h2{
+  font-family:"Bitter",Georgia,serif;font-size:1.15rem;color:var(--ocker);
+  margin:0 0 1rem;line-height:1.3;
+}
+.eilig ol{margin:0;padding-left:0;list-style:none;counter-reset:e}
+.eilig li{
+  counter-increment:e;position:relative;padding-left:2.3rem;margin-bottom:.95rem;
+  font-size:1rem;line-height:1.6;
+}
+.eilig li:last-child{margin-bottom:0}
+.eilig li::before{
+  content:counter(e);position:absolute;left:0;top:.05rem;
+  width:1.6rem;height:1.6rem;border-radius:50%;
+  background:var(--ocker);color:var(--wald-tief);
+  font-weight:700;font-size:.85rem;display:grid;place-items:center;
+}
+.eilig strong{color:#fff}
+
+/* Textkörper */
+main{padding-bottom:3rem}
+.label{
+  font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--salbei);margin:3.2rem 0 .35rem;
+}
+h2{
+  font-family:"Bitter","Iowan Old Style",Palatino,Georgia,serif;
+  font-size:clamp(1.4rem,4.6vw,1.85rem);line-height:1.2;color:var(--wald);
+  margin:0 0 .9rem;letter-spacing:-.01em;
+}
+h3{font-size:1.05rem;color:var(--braun);margin:1.9rem 0 .4rem}
+p{margin:0 0 1.1rem}
+strong{color:var(--wald)}
+.gross{font-size:1.12rem;line-height:1.6}
+
+/* Großer Wert */
+.wert{
+  background:linear-gradient(160deg,var(--creme-2),var(--papier));
+  border:1px solid var(--stein);border-radius:16px;
+  padding:1.7rem 1.4rem;margin:2.2rem 0;text-align:center;
+}
+.wert .zahl{
+  font-family:"Bitter",Georgia,serif;font-size:clamp(2rem,9vw,3.1rem);
+  font-weight:700;color:var(--moos);line-height:1;letter-spacing:.04em;
+}
+.wert .zahl em{font-style:normal;color:var(--terra)}
+.wert .unter{font-size:.95rem;color:var(--leise);margin-top:.8rem;line-height:1.5}
+
+/* Figuren */
+figure{margin:2.2rem 0}
+.fig{
+  background:var(--papier);border:1px solid var(--stein);border-radius:16px;
+  padding:1.2rem 1.1rem 1rem;
+}
+.fig-titel{font-family:"Bitter",Georgia,serif;font-size:1.02rem;color:var(--wald);margin:0 0 .3rem}
+.fig-lead{font-size:.92rem;color:var(--leise);margin:0 0 1rem;line-height:1.5}
+.fig svg{width:100%;height:auto;display:block}
+.quelle{font-size:.8rem;color:var(--leise);margin:.8rem 0 0;line-height:1.5}
+
+/* Bildpaar */
+.paar{display:grid;gap:1.1rem;margin:2rem 0}
+@media(min-width:640px){.paar{grid-template-columns:1fr 1fr}}
+.paar figure{margin:0}
+.paar img{border-radius:12px}
+.paar figcaption{font-size:.85rem;color:var(--leise);margin-top:.55rem;line-height:1.5}
+
+/* Karten */
+.karten{display:grid;gap:.9rem;margin:1.6rem 0 2.2rem}
+.karte{background:var(--papier);border-radius:14px;padding:1.05rem 1.15rem;border:1px solid var(--stein);border-left:5px solid var(--moos)}
+.karte.gelb{border-left-color:var(--ocker)}
+.karte.rot{border-left-color:var(--terra)}
+.karte h4{margin:0 0 .35rem;font-size:1.02rem;color:var(--wald);font-family:"Bitter",Georgia,serif}
+.karte p{margin:0;font-size:.97rem;color:#4A5046}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:.14rem .55rem;border-radius:99px;margin-left:.45rem;vertical-align:.12em;letter-spacing:.03em}
+.t-gut{background:rgba(108,138,87,.2);color:#3E5433}
+.t-teils{background:rgba(214,160,60,.25);color:#7A5710}
+.t-mythos{background:rgba(188,106,70,.18);color:#8A4127}
+
+/* Hinweiskasten */
+.box{
+  background:var(--creme-2);border-radius:14px;padding:1.15rem 1.2rem;
+  margin:2rem 0;border:1px solid var(--stein);
+}
+.box h4{margin:0 0 .45rem;font-size:1rem;color:var(--braun);font-family:"Bitter",Georgia,serif}
+.box p{margin:0 0 .65rem;font-size:.97rem}
+.box p:last-child{margin:0}
+
+/* Fazit */
+.fazit{background:var(--wald);color:#EFEADB;border-radius:16px;padding:1.6rem 1.4rem;margin:2.6rem 0 1.4rem}
+.fazit h2{color:var(--ocker);margin-top:0}
+.fazit ul{margin:0;padding-left:1.15rem}
+.fazit li{margin-bottom:.7rem}
+.fazit li:last-child{margin-bottom:0}
+.fazit strong{color:#fff}
+
+/* CTA */
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin:2rem 0 1rem}
+.cta a{
+  display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;
+  padding:.65rem 1.1rem;border-radius:99px;
+}
+.cta .primaer{background:var(--moos);color:#fff}
+.cta .sekundaer{border:1px solid var(--salbei);color:var(--wald)}
+
+/* Quellen */
+.quellen{margin-top:3rem;border-top:1px solid var(--stein);padding-top:1.6rem}
+.quellen h2{font-size:1.2rem}
+.quellen ul{list-style:none;padding:0;margin:0;font-size:.9rem;color:var(--leise);line-height:1.55}
+.quellen li{margin-bottom:.9rem}
+.quellen a{word-break:break-word}
+.disclaimer{font-size:.87rem;color:var(--leise);line-height:1.6;margin-top:1.6rem}
+
+/* Footer */
+footer{background:var(--wald-tief);color:#CFD5C7;margin-top:3rem;padding:2.2rem 0 2.8rem;font-size:.9rem}
+footer .weit{display:grid;gap:1.6rem}
+@media(min-width:700px){footer .weit{grid-template-columns:repeat(4,1fr)}}
+footer h3{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--salbei);margin:0 0 .6rem}
+footer a{color:#E4E8DE;text-decoration:none;display:block;margin-bottom:.35rem}
+footer a:hover{text-decoration:underline}
+footer p{margin:0;line-height:1.6}
+
+/* Animationen */
+.zeichne{stroke-dasharray:1;stroke-dashoffset:1;animation:zeichne 1.4s ease-out forwards}
+@keyframes zeichne{to{stroke-dashoffset:0}}
+.wachs{transform-origin:left center;animation:wachs 1.2s cubic-bezier(.34,.9,.3,1) both}
+@keyframes wachs{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.einblenden{opacity:0;animation:einblenden .9s ease-out forwards}
+@keyframes einblenden{to{opacity:1}}
+.glimm{animation:glimm 3.6s ease-in-out infinite}
+@keyframes glimm{0%,100%{opacity:.30}50%{opacity:.70}}
+.schieb{transform-origin:center bottom;animation:schieb 5.5s ease-in-out infinite}
+@keyframes schieb{
+  0%,10%{opacity:0;transform:translateY(9px) scaleY(.4)}
+  30%,62%{opacity:1;transform:translateY(0) scaleY(1)}
+  82%,100%{opacity:0;transform:translateY(9px) scaleY(.4)}
+}
+.brennessel{transform-origin:center bottom;animation:brennessel 5.5s ease-in-out infinite}
+@keyframes brennessel{
+  0%,10%{transform:scaleY(.55)}
+  38%,70%{transform:scaleY(1)}
+  95%,100%{transform:scaleY(.55)}
+}
+@media (prefers-reduced-motion:reduce){
+  .zeichne,.wachs,.einblenden,.glimm,.schieb,.brennessel{animation:none!important;
+    stroke-dashoffset:0!important;opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="marke" href="/">Pilz<span>gebiete</span></a>
+    <a class="zurueck" href="/#waldwissen">Waldwissen</a>
+  </div>
+</nav>
+
+<header class="kopf">
+  <div class="wrap">
+    <span class="rubrik">Waldwissen</span>
+    <h1>Steinpilz-Anzeiger: was funktioniert und was Mythos ist</h1>
+    <p class="vorspann">Manche Faustregeln tragen erstaunlich weit. Andere fallen genau dann durch, wenn man sich auf sie verlässt. Der Unterschied lässt sich erklären — und er erklärt gleich mit, warum sonnige Grashänge manchmal besser sind als der dunkle Hochwald.</p>
+    <p class="stand">Stand September 2026 · Grundlage sind Zeigerwerte der Vegetationskunde, Feldstudien aus Deutschland, Kanada und Spanien sowie die ökologische Fachliteratur zu Mykorrhizapilzen. Alle Quellen am Ende der Seite.</p>
+
+    <figure class="hero">
+      <img src="img/hero-steinpilze.jpg" alt="Zwei Steinpilze mit hellbraunen Hüten stehen im Moos eines Fichtenwaldes" width="1169" height="803">
+      <figcaption class="bu">Zwei auf einmal. Beide stehen hier, weil unter dem Moos derselbe Boden liegt — nicht, weil der eine den anderen gerufen hätte.</figcaption>
+    </figure>
+
+    <div class="eilig">
+      <h2>Die kurze Antwort, falls du es eilig hast</h2>
+      <ol>
+        <li><strong>Ein Anzeiger zeigt nie den Pilz, sondern den Ort.</strong> Fliegenpilz und Mehlräsling stehen oft neben dem Steinpilz, weil sie denselben Boden mögen. Eine biologische Verbindung ist für keinen der vermeintlichen Anzeigerpilze nachgewiesen.</li>
+        <li><strong>Der Farn ist das ehrlichste Messgerät.</strong> Der Adlerfarn steht für lichtreich, mäßig frisch, sauer und nährstoffarm — fast genau das Standortfenster des Fichtensteinpilzes. Nur sagt nicht jeder Farn dasselbe.</li>
+        <li><strong>„Steinpilz“ ist kein Pilz, sondern mindestens vier Arten</strong> mit vier Baumpartnern und vier Kalendern. Deshalb widersprechen sich die Faustregeln — und deshalb kann auch ein sonniger Grashang passen.</li>
+      </ol>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <p class="label">Das Prinzip</p>
+  <h2>Der Fliegenpilz weiß nichts vom Steinpilz</h2>
+
+  <p class="gross">Du gehst durch den Wald, und plötzlich steht da ein Fliegenpilz. Rot, weiß getupft, nicht zu übersehen. Sofort wirst du langsamer — weil du irgendwo gehört hast, dass jetzt auch ein Steinpilz in der Nähe sein müsste.</p>
+
+  <p>Manchmal stimmt das. Manchmal überhaupt nicht. Das ist kein Zufall.</p>
+
+  <p>Die beiden reden nicht miteinander, füttern sich nicht, folgen einander nicht. Dass sie oft nebeneinander stehen, ist gut dokumentiert — aber <strong>eine biologische Verbindung konnte bisher für keinen der vermeintlichen Anzeigerpilze nachgewiesen werden. Naheliegender ist, dass das gemeinsame Auftreten schlicht an ähnlichen Boden- und Witterungsansprüchen liegt.</strong></p>
+
+  <p>Das ist der ganze Trick. Ein Anzeiger ist kein Wegweiser, sondern ein Messgerät. Er sagt dir nicht „hier ist ein Steinpilz“, sondern: hier ist der Boden sauer, hier kommt Licht durch, hier ist es feucht genug und nicht überdüngt. Treffen diese Dinge zusammen, passt der Ort eben für mehrere Arten gleichzeitig.</p>
+</div>
+
+<div class="weit">
+  <figure>
+    <div class="fig">
+      <p class="fig-titel">Drei Arten, ein gemeinsames Fenster</p>
+      <p class="fig-lead">Jede Art lebt in einem Ausschnitt der Skala. Ein Anzeiger nützt genau so viel, wie sein Ausschnitt sich mit dem des gesuchten Pilzes überschneidet.</p>
+      <svg viewBox="0 0 640 260" role="img" aria-label="Skala von sauer und mager bis kalkhaltig und nährstoffreich. Die Bereiche von Adlerfarn, Fliegenpilz und Fichtensteinpilz überschneiden sich in einem schmalen gemeinsamen Fenster.">
+        <defs>
+          <linearGradient id="fenster" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#6C8A57" stop-opacity=".45"/>
+            <stop offset="100%" stop-color="#6C8A57" stop-opacity=".08"/>
+          </linearGradient>
+        </defs>
+
+        <rect x="236" y="34" width="132" height="176" fill="url(#fenster)" rx="8" class="glimm"/>
+        <text x="302" y="26" text-anchor="middle" font-family="Bitter,Georgia,serif" font-size="14" font-weight="700" fill="#2B4230">hier lohnt das Suchen</text>
+
+        <g font-family="sans-serif" font-size="12.5" fill="#282C24">
+          <text x="14" y="70">Adlerfarn</text>
+          <text x="14" y="126">Fliegenpilz</text>
+          <text x="14" y="182">Fichtensteinpilz</text>
+        </g>
+
+        <g stroke="#DCD7CB" stroke-width="1.5">
+          <line x1="118" y1="76" x2="626" y2="76"/>
+          <line x1="118" y1="132" x2="626" y2="132"/>
+          <line x1="118" y1="188" x2="626" y2="188"/>
+        </g>
+
+        <rect x="150" y="68" width="230" height="17" rx="8.5" fill="#7A5A3C" class="wachs" style="animation-delay:.15s"/>
+        <rect x="196" y="124" width="238" height="17" rx="8.5" fill="#BC6A46" class="wachs" style="animation-delay:.4s"/>
+        <rect x="236" y="180" width="252" height="17" rx="8.5" fill="#6C8A57" class="wachs" style="animation-delay:.65s"/>
+
+        <g stroke="#B9B2A3" stroke-width="1.2" stroke-dasharray="4 4">
+          <line x1="236" y1="34" x2="236" y2="212"/>
+          <line x1="368" y1="34" x2="368" y2="212"/>
+        </g>
+
+        <line x1="118" y1="228" x2="626" y2="228" stroke="#2B4230" stroke-width="1.5"/>
+        <g font-family="sans-serif" font-size="11.5" fill="#5C6156">
+          <text x="118" y="248">sauer · mager · lichtreich</text>
+          <text x="626" y="248" text-anchor="end">kalkhaltig · nährstoffreich · schattig</text>
+        </g>
+      </svg>
+      <p class="quelle">Schematische Darstellung. Die Lage der Balken folgt den Standortangaben der jeweiligen Arten, nicht gemessenen Werten · Darstellung: Pilzgebiete</p>
+    </div>
+  </figure>
+</div>
+
+<div class="wrap">
+  <p class="label">Die Klassiker</p>
+  <h2>Fliegenpilz und Mehlräsling</h2>
+
+  <p>Der <strong>Fliegenpilz</strong> lebt in Symbiose mit Birke, Fichte und Kiefer und bevorzugt saure, nährstoffarme Böden — dieselbe Ecke, in der auch der Fichtensteinpilz zu Hause ist. Deshalb trägt die Regel im sauren Nadel- und Mischwald gut. Im Buchenwald über Kalk trägt sie nicht, weil dort schon der Fliegenpilz selten wird.</p>
+
+  <p>Der <strong>Mehlräsling</strong> ist unter Sammlern der Favorit. Der kleine weiße Pilz riecht auffällig nach frischem Mehl und steht vor allem in Nadel- und Nadelmischwäldern bei Fichten, gern am Waldrand, auf Waldwegen und Lichtungen; in Oberbayern hat er von August bis Oktober Hauptsaison. Auch hier fehlt ein Beleg für eine Kopplung an den Steinpilz. Er zeigt einfach dieselbe Kombination an — und er zeigt sie oft früher.</p>
+</div>
+
+<div class="weit">
+  <div class="paar">
+    <figure>
+      <img src="img/fliegenpilz.jpg" alt="Junger Fliegenpilz mit leuchtend rotem Hut und weißen Flocken zwischen Gras und Moos" width="1169" height="853">
+      <figcaption>Fliegenpilz im Gras am Waldrand. Saurer Boden, Licht, Moos — drei Messwerte auf einen Blick.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/mehlraesling.jpg" alt="Zwei weiße Mehlräslinge mit herablaufenden Lamellen im Gras" width="1035" height="697">
+      <figcaption>Mehlräsling — weiß, mit stark mehligem Geruch. Der meistgenannte Steinpilz-Anzeiger.<br>
+      <em>Foto: James Lindsey at Ecology of Commanster, „Clitopilus prunulus - Lindsey.jpg“, <a href="https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_-_Lindsey.jpg">Wikimedia Commons</a>, Lizenz <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>, Bildausschnitt verändert.</em></figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="box">
+    <h4>Bitte lesen, nicht sammeln</h4>
+    <p>Der Mehlräsling lässt sich mit weißen Trichterlingen verwechseln, von denen einige stark giftig sind. Wer ihn als Wegweiser benutzt, braucht ihn nicht in den Korb zu legen — schauen reicht vollkommen.</p>
+    <p>Und grundsätzlich: Diese Seite hilft dir, geeignete Wälder zu erkennen. Bestimmen musst du selbst, im Zweifel bei einer Pilzsachverständigen oder einem Pilzsachverständigen vor Ort.</p>
+  </div>
+
+  <p class="label">Der zuverlässigste Zeiger</p>
+  <h2>Der Farn ist ein Messgerät</h2>
+
+  <p>Für Pflanzen gibt es eine Art ökologischen Steckbrief: die Zeigerwerte nach Ellenberg. Jede Art bekommt Zahlen dafür, wie viel Licht, Feuchte, Säure und Nährstoffe sie braucht. Beim Adlerfarn steht dort:</p>
+
+  <div class="wert">
+    <div class="zahl">L6 F5 <em>R3</em> N3</div>
+    <p class="unter">Lichtzahl 6 · Feuchtezahl 5 · <strong>Reaktionszahl 3 — saurer Boden</strong> · Stickstoffzahl 3 — nährstoffarm.<br>Zeigerwerte des Adlerfarns nach Ellenberg &amp; Leuschner.</p>
+  </div>
+
+  <p>Das ist fast deckungsgleich mit dem Standortfenster des Fichtensteinpilzes. Passend dazu wächst der Adlerfarn bevorzugt auf sauren Böden in den Säumen und Lichtungen von Eichenwäldern, Kiefernforsten und Moorwäldern, auf nährstoffarmen, humosen Böden an sonnigen bis halbschattigen Standorten. Wo er steht, hat er dir drei Messwerte abgelesen, ohne dass du graben musst.</p>
+
+  <h3>Zwei Einschränkungen, die man kennen muss</h3>
+
+  <p><strong>Erstens ist „Farn“ keine Pflanze, sondern ein Dutzend.</strong> Wurmfarn, Frauenfarn und die Dornfarne, die in Fichtenwäldern ganze Teppiche bilden, stehen für frischere, humusreichere, oft nährstoffreichere Böden — eine andere Nachricht als die des Adlerfarns. Wer den Farn als Zeiger benutzt, muss wissen, welcher da steht.</p>
+
+  <p><strong>Zweitens ist ein dichter Teppich etwas anderes als ein lichter Saum.</strong> Ein jahrelang ungestörter Farnbestand baut eine mächtige Streuauflage auf — und die ist ungünstig, wie der nächste Abschnitt zeigt. Der Farn am lichten Rand ist das gute Zeichen, nicht das geschlossene Dickicht.</p>
+</div>
+
+<div class="weit">
+  <div class="paar">
+    <figure>
+      <img src="img/farnteppich.jpg" alt="Dichter Farnteppich über Moos auf einem Fichtenwaldboden" width="1170" height="2322">
+      <figcaption>Farn über Moos im Fichtenwald. Der Bewuchs zeigt sauren, humusreichen Boden an — die Frage ist, wie dick die Streu darunter liegt.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fichten-farn-gras.jpg" alt="Lichter Fichtenbestand mit Gras und einzelnen Farnwedeln am Rand" width="1170" height="1559">
+      <figcaption>Der interessantere Typ: lichter Bestand, Gras, einzelne Farne, dünne Nadelstreu.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="label">Der Boden</p>
+  <h2>Fette Böden sind schlechte Pilzböden</h2>
+
+  <p>Mykorrhizapilze sind Sparer. Sie leisten für den Baum genau das, was er selbst nicht kann: Nährstoffe aus einem kargen Boden holen. Ist der Boden ohnehin reich, braucht der Baum den Handel weniger dringend — und der Pilz bekommt weniger Zucker.</p>
+
+  <p>Das findet man im Wald wieder: <strong>Die Entwicklung der Ektomykorrhiza wird durch dicke, stickstoffreiche Streuauflagen beeinträchtigt, und zwischen der Mächtigkeit der Streuschicht und der Zahl der Fruchtkörper besteht ein negativer Zusammenhang.</strong> Nährstoffarme Verhältnisse dagegen begünstigen Wurzelwachstum und Mykorrhizabildung.</p>
+
+  <p>Deshalb ist die Brennnessel ein sehr guter Anzeiger — nur mit umgekehrtem Vorzeichen. Wo sie flächig steht, ist viel Stickstoff im Spiel. Dreh um.</p>
+</div>
+
+<div class="weit">
+  <figure>
+    <div class="fig">
+      <p class="fig-titel">Zwei Waldböden, zwei Ergebnisse</p>
+      <p class="fig-lead">Links mager und licht: dünne Streu, Moos, das Myzel liegt dicht unter der Oberfläche. Rechts fett: eine mächtige Auflage, Stickstoffzeiger im Bestand, das Netz zieht sich zurück.</p>
+      <svg viewBox="0 0 640 280" role="img" aria-label="Vergleich zweier Waldbodenprofile. Links dünne Streuauflage mit Fruchtkörpern, rechts dicke stickstoffreiche Auflage mit Brennnesseln und ohne Fruchtkörper.">
+        <!-- LINKS -->
+        <text x="18" y="22" font-family="Bitter,Georgia,serif" font-size="14" font-weight="700" fill="#6C8A57">mager &amp; licht</text>
+        <g class="schieb">
+          <ellipse cx="80" cy="96" rx="22" ry="11" fill="#7A5A3C"/>
+          <rect x="71" y="96" width="18" height="24" rx="5" fill="#E9DFC6"/>
+          <ellipse cx="160" cy="104" rx="15" ry="8" fill="#7A5A3C"/>
+          <rect x="154" y="104" width="12" height="17" rx="4" fill="#E9DFC6"/>
+          <ellipse cx="228" cy="92" rx="25" ry="12" fill="#6E4F34"/>
+          <rect x="218" y="92" width="20" height="27" rx="5" fill="#E9DFC6"/>
+        </g>
+        <rect x="14" y="122" width="284" height="10" rx="4" fill="#C9A96B"/>
+        <rect x="14" y="132" width="284" height="96" fill="#4A3B2A"/>
+        <g stroke="#F0E6C9" stroke-width="1.6" fill="none" opacity=".92">
+          <path d="M20 152 Q78 140 132 158 T248 148 T294 160"/>
+          <path d="M20 180 Q86 168 146 186 T262 174 T294 188"/>
+          <path d="M20 208 Q90 200 150 212 T294 206"/>
+          <path d="M70 142 L76 212 M140 150 L134 216 M210 144 L218 210"/>
+        </g>
+        <text x="20" y="246" font-family="sans-serif" font-size="11.5" fill="#5C6156">dünne Streu · Moos · dichtes Myzel</text>
+
+        <!-- Trennlinie -->
+        <line x1="320" y1="14" x2="320" y2="252" stroke="#DCD7CB" stroke-width="1.5"/>
+
+        <!-- RECHTS -->
+        <text x="342" y="22" font-family="Bitter,Georgia,serif" font-size="14" font-weight="700" fill="#BC6A46">fett &amp; stickstoffreich</text>
+        <g class="brennessel" fill="#4E7040">
+          <path d="M392 122 L392 66 M392 78 q-16 -8 -20 -20 q18 2 20 16 M392 96 q16 -8 20 -20 q-18 2 -20 16" stroke="#4E7040" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M470 122 L470 74 M470 86 q-14 -7 -18 -18 q16 2 18 14 M470 102 q14 -7 18 -18 q-16 2 -18 14" stroke="#4E7040" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M548 122 L548 62 M548 76 q-17 -9 -21 -21 q19 2 21 17 M548 96 q17 -9 21 -21 q-19 2 -21 17" stroke="#4E7040" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        </g>
+        <rect x="342" y="122" width="284" height="34" rx="5" fill="#B58F53"/>
+        <rect x="342" y="156" width="284" height="72" fill="#4A3B2A"/>
+        <g stroke="#F0E6C9" stroke-width="1.4" fill="none" opacity=".2">
+          <path d="M348 186 Q410 178 468 192 T622 184"/>
+          <path d="M348 212 Q416 204 476 214 T622 208"/>
+        </g>
+        <text x="348" y="246" font-family="sans-serif" font-size="11.5" fill="#5C6156">mächtige Auflage · Stickstoffzeiger · kaum Fruchtkörper</text>
+      </svg>
+      <p class="quelle">Schematische Darstellung des Zusammenhangs zwischen Streuauflage, Stickstoff und Fruchtkörperbildung. Grundlage: Baar &amp; de Vries, zitiert in der Untersuchung zur Moosschicht bei <em>Cantharellus cibarius</em> · Darstellung: Pilzgebiete</p>
+    </div>
+  </figure>
+</div>
+
+<div class="wrap">
+  <p class="label">Warum die Regeln sich widersprechen</p>
+  <h2>„Steinpilz“ ist kein Pilz</h2>
+
+  <p>Viele Sammler finden ihre besten Steinpilze nicht im dunklen Hochwald, sondern an einer warmen, grasigen Böschung, an einer Lichtung, am Rand eines Weges. Das widerspricht keiner Regel. Es hat zwei Gründe.</p>
+
+  <p><strong>Erstens Wärme und Luft.</strong> Am Rand ist der Boden wärmer, die Streuschicht dünner, das Gras zeigt Licht an. Genau die Bedingungen, unter denen ein Mykorrhizapilz gern fruchtet — auch der Mehlräsling steht deutlich häufiger am Waldrand und auf Lichtungen als tief im Bestand.</p>
+
+  <p><strong>Zweitens, und das ist der eigentliche Knackpunkt:</strong> Was wir „Steinpilz“ nennen, sind mindestens vier Arten. Jede hat ihren eigenen Baum und ihren eigenen Kalender.</p>
+</div>
+
+<div class="weit">
+  <figure>
+    <div class="fig">
+      <p class="fig-titel">Vier Steinpilze, vier Kalender</p>
+      <p class="fig-lead">Ungefähre Hauptzeiten und Baumpartner. Wer alle vier „Steinpilz“ nennt, bekommt zwangsläufig widersprüchliche Faustregeln.</p>
+      <svg viewBox="0 0 640 280" role="img" aria-label="Zeitleiste von Mai bis November mit den Hauptzeiten von Sommersteinpilz, Bronzeröhrling, Fichtensteinpilz und Kiefernsteinpilz samt Baumpartnern.">
+        <g font-family="sans-serif" font-size="11.5" fill="#5C6156">
+          <text x="228" y="20">Mai</text><text x="316" y="20">Juli</text>
+          <text x="404" y="20">Sept</text><text x="492" y="20">Nov</text>
+        </g>
+        <g stroke="#E7E1D4" stroke-width="1">
+          <line x1="228" y1="28" x2="228" y2="252"/><line x1="316" y1="28" x2="316" y2="252"/>
+          <line x1="404" y1="28" x2="404" y2="252"/><line x1="492" y1="28" x2="492" y2="252"/>
+        </g>
+
+        <!-- Sommersteinpilz -->
+        <g transform="translate(0,44)">
+          <text x="14" y="10" font-family="Bitter,Georgia,serif" font-size="13.5" fill="#2B4230">Sommersteinpilz</text>
+          <text x="14" y="26" font-family="sans-serif" font-size="11" fill="#7A5A3C">Eiche · Buche · Linde</text>
+          <rect x="228" y="2" width="132" height="15" rx="7.5" fill="#D6A03C" class="wachs" style="animation-delay:.1s"/>
+        </g>
+        <!-- Bronzeröhrling -->
+        <g transform="translate(0,110)">
+          <text x="14" y="10" font-family="Bitter,Georgia,serif" font-size="13.5" fill="#2B4230">Bronzeröhrling</text>
+          <text x="14" y="26" font-family="sans-serif" font-size="11" fill="#7A5A3C">Eiche, warme Lagen</text>
+          <rect x="272" y="2" width="110" height="15" rx="7.5" fill="#BC6A46" class="wachs" style="animation-delay:.3s"/>
+        </g>
+        <!-- Fichtensteinpilz -->
+        <g transform="translate(0,176)">
+          <text x="14" y="10" font-family="Bitter,Georgia,serif" font-size="13.5" fill="#2B4230">Fichtensteinpilz</text>
+          <text x="14" y="26" font-family="sans-serif" font-size="11" fill="#7A5A3C">Fichte · Buche</text>
+          <rect x="316" y="2" width="154" height="15" rx="7.5" fill="#6C8A57" class="wachs" style="animation-delay:.5s"/>
+        </g>
+        <!-- Kiefernsteinpilz -->
+        <g transform="translate(0,230)">
+          <text x="14" y="4" font-family="Bitter,Georgia,serif" font-size="13.5" fill="#2B4230">Kiefernsteinpilz</text>
+          <text x="14" y="20" font-family="sans-serif" font-size="11" fill="#7A5A3C">Kiefer, magerer Sand</text>
+          <rect x="338" y="-4" width="136" height="15" rx="7.5" fill="#7A5A3C" class="wachs" style="animation-delay:.7s"/>
+        </g>
+      </svg>
+      <p class="quelle">Zeiträume gerundet nach den gängigen Artbeschreibungen; regional und je nach Jahr verschieben sie sich deutlich · Darstellung: Pilzgebiete</p>
+    </div>
+  </figure>
+</div>
+
+<div class="wrap">
+  <p>Wie weit das gehen kann, zeigt ein Fund im Engadin. Auf <strong>2440 Metern</strong>, weit über der Baumgrenze im Skigebiet Motta Naluns, wuchsen wiederholt Steinpilze. Die genetische Untersuchung der Mykorrhizastrukturen ergab einen unscheinbaren Partner — die <strong>Kraut-Weide</strong>, ein Zwergstrauch von wenigen Zentimetern Höhe. Damit ist erwiesen, dass der Steinpilz nicht auf große Bäume angewiesen ist.</p>
+
+  <p>Ein sonniger Hang mit Gras kann also durchaus passen. Man muss nur wissen, welcher Partner darin steckt.</p>
+</div>
+
+<div class="weit">
+  <figure>
+    <img src="img/fichtenwald-gras.jpg" alt="Lichter Fichtenbestand mit grasigem, moosigem Boden und Sonnenflecken" width="1169" height="1536" style="border-radius:14px">
+    <figcaption class="bu">Licht, Gras, Moos, alter Wurzelstock: kein klassisches Pilzbild — aber oft die bessere Adresse als der dunkle Hallenwald daneben.</figcaption>
+  </figure>
+</div>
+
+<div class="wrap">
+  <p class="label">Andere Art, andere Zeiger</p>
+  <h2>Und der Pfifferling?</h2>
+
+  <p>Bei ihm funktioniert dieselbe Logik mit anderen Messgeräten. Hier ist es vor allem das <strong>Moos</strong>. In einer Untersuchung produktiver Pfifferling-Standorte waren häufiges Moosvorkommen, ein hohes C:N-Verhältnis des Bodens und ein mäßig saurer Sandboden die Merkmale der günstigen Kleinlebensräume — während Heidekrautgewächse negativ korreliert waren. Dazu passen die üblichen Standortangaben mit einem pH zwischen etwa 4 und 5,5 auf sauren, gut durchlässigen Böden mit tiefem Humus.</p>
+
+  <p>Moos ist beim Pfifferling also das, was der Adlerfarn beim Steinpilz ist. Mehr dazu steht im Artikel <a href="/pfifferling/">Der Echte Pfifferling</a>.</p>
+
+  <p class="label">Aussortiert</p>
+  <h2>Was nicht funktioniert</h2>
+
+  <div class="karten">
+    <div class="karte rot">
+      <h4>„Sieben Schritte nach Norden“ <span class="tag t-mythos">Mythos</span></h4>
+      <p>Feste Abstands- oder Richtungsregeln zwischen Fliegenpilz und Steinpilz gibt es nicht. Es existiert keine Verbindung, die einen Abstand vorgeben könnte.</p>
+    </div>
+    <div class="karte rot">
+      <h4>Die „Steinpilzmutter“ <span class="tag t-mythos">Mythos</span></h4>
+      <p>Der Mehlräsling erzeugt oder füttert keinen Steinpilz. Er steht am selben Ort — und die Regel funktioniert genauso gut andersherum.</p>
+    </div>
+    <div class="karte gelb">
+      <h4>Ein einzelner Anzeiger <span class="tag t-teils">reicht nicht</span></h4>
+      <p>Ein Fliegenpilz allein sagt wenig. Erst die Kombination — passende Baumart, saurer Boden, dünne Streu, Licht, Moos oder Farn — macht eine Stelle plausibel.</p>
+    </div>
+  </div>
+
+  <p class="label">Der Zeitpunkt</p>
+  <h2>Der Ort ist nur die halbe Miete</h2>
+
+  <p>Anzeiger sagen dir, <em>wo</em>. Sie sagen dir nicht, <em>wann</em>. Das übernimmt das Wetter, und zwar mit erstaunlich langer Vorlaufzeit: Zehn Jahre systematische Zählung in einem mitteleuropäischen Buchenwald ergaben ein geschätztes Temperaturoptimum von rund 13 °C im Mittel der Tage vor dem Fund — und keinen einfachen Zusammenhang mit dem Regen von gestern.</p>
+
+  <p>Der Wald von heute erzählt dir, was vor Wochen passiert ist. Die ganze Rechnung steht im Artikel <a href="/wachstum/">Wie schnell wächst ein Steinpilz?</a>.</p>
+
+  <div class="box">
+    <h4>Was wir ehrlicherweise nicht wissen</h4>
+    <p>Die belastbaren Zahlen zu Vegetation und Pilzvorkommen stammen überwiegend aus mediterranen Zistrosen-Beständen und nordamerikanischen Kiefernwäldern. Dass sich die Zusammenhänge auf bayerische Fichten- und Buchenwälder übertragen, ist plausibel, aber nicht im Detail belegt.</p>
+    <p>Vor allem: Es gibt bis heute keine Studie, die „Anzeigerpilz suchen“ als Suchstrategie geprüft hätte. Gut belegt sind die Standortansprüche der beteiligten Arten. Der Rest ist Erfahrung — gute Erfahrung, aber eben Erfahrung.</p>
+  </div>
+
+  <div class="fazit">
+    <h2>Drei Dinge, die man mitnehmen kann</h2>
+    <ul>
+      <li><strong>Lies den Ort, nicht den Pilz.</strong> Anzeiger sind Messgeräte für Boden, Licht und Feuchte. Deshalb tragen sie in manchen Wäldern und in anderen nicht.</li>
+      <li><strong>Achte auf die Auflage.</strong> Dünne Streu und Moos sind gute Zeichen, ein Brennnesselfeld ist ein schlechtes. Karger Boden heißt mehr Mykorrhiza, nicht weniger.</li>
+      <li><strong>Frag, welcher Steinpilz.</strong> Vier Arten, vier Bäume, vier Zeiten — und einer davon kommt sogar mit einer Zwergweide über der Baumgrenze aus.</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <a class="primaer" href="https://apps.apple.com/de/app/pilzgebiete-pilze-finden/id6801844504">Pilzgebiete im App Store ansehen</a>
+    <a class="sekundaer" href="/">Zurück zur Startseite</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="quellen">
+    <p class="label" style="margin-top:0">Belege</p>
+    <h2>Quellen</h2>
+    <p style="font-size:.92rem;color:var(--leise)">Alle Aussagen auf dieser Seite stützen sich auf die folgenden Veröffentlichungen. Grafiken und Text sind eigene Darstellungen.</p>
+    <ul>
+      <li><strong>Gemeiner Steinpilz — Ökologie und Vergesellschaftung.</strong> Grundlage der Aussage, dass die Vergesellschaftung mit Fliegenpilz, Mehlräsling und Perlpilz dokumentiert, eine biologische Verbindung aber für keinen dieser Pilze nachgewiesen ist, und dass ähnliche Boden- und Witterungsansprüche die naheliegendere Erklärung sind. <a href="https://biologie-seite.de/Biologie/Gemeiner_Steinpilz">biologie-seite.de</a></li>
+      <li><strong>Peter, M.; Treidl, A. — Mykorrhizapilze: die geheimen Helfer im Wald.</strong> Grundlage des Steinpilzfundes auf 2440 m im Engadin mit der Kraut-Weide (<em>Salix herbacea</em>) als genetisch nachgewiesenem Mykorrhizapartner. <a href="https://www.waldwissen.net/de/lebensraum-wald/pilze-und-flechten/mykorrhizapilze-die-geheimen-helfer-im-wald">waldwissen.net</a></li>
+      <li><strong>Ellenberg, H.; Leuschner, C. — Zeigerwerte der Gefäßpflanzen Mitteleuropas.</strong> Grundlage der Zeigerwerte des Adlerfarns (L6 F5 R3 N3). <a href="https://www.natur-erforschen.net/unterrichtsprojekte/pflanzenverbreitung/pflanzen-rumbeckerholz-sternhelle/artenliste-sternhelle/teilliste-rumbeckerholz.html">Artenliste mit Zeigerwerten</a></li>
+      <li><strong>Zeigerpflanzen auf Waldstandorten.</strong> Grundlage der Angabe, dass der Adlerfarn für Säume und Lichtungen saurer Eichen- und Kiefernwälder charakteristisch ist. <a href="https://www.forst-rast.de/Zeigerpflanzen.html">forst-rast.de</a></li>
+      <li><strong>Artenportrait Adlerfarn (<em>Pteridium aquilinum</em>).</strong> Grundlage der Standortangabe: nährstoffarme, humose, saure Böden, sonnig bis halbschattig. <a href="https://www.naturadb.de/pflanzen/pteridium-aquilinum/">naturadb.de</a></li>
+      <li><strong>Mehlräsling (<em>Clitopilus prunulus</em>).</strong> Grundlage der Angaben zu Vorkommen bei Fichten, zur Häufung an Waldrändern, Wegen und Lichtungen, zur oberbayerischen Hauptsaison August bis Oktober sowie zur Verwechslungsgefahr mit weißen Trichterlingen. <a href="https://www.pilzbuch-pilzwelten.de/mehlraesling/clitopilus-prunulus.html">pilzbuch-pilzwelten.de</a></li>
+      <li><strong>Baar, J.; de Vries, F.</strong> — referiert in der Untersuchung zum Einfluss der Moosschicht auf <em>Cantharellus cibarius</em>. Grundlage der Aussage, dass dicke, stickstoffreiche Streuauflagen die Ektomykorrhiza beeinträchtigen und Streuauflage und Fruchtkörperzahl negativ zusammenhängen. <a href="https://www.researchgate.net/publication/286859832_Effect_of_removal_of_moss_layer_on_the_growth_of_Cantharellus_cibarius_fruit_bodies">ResearchGate</a></li>
+      <li><strong>Rochon, C.; Paré, D.; Pélardy, N.; Khasa, D. P.; Fortin, J. A. — Ecology and productivity of <em>Cantharellus cibarius</em> var. <em>roseocanus</em> in two eastern Canadian jack pine stands.</strong> Botany 89 (2011) 663–675. Grundlage der Pfifferling-Merkmale: Moosvorkommen und hohes C:N-Verhältnis positiv, Ericaceen negativ korreliert. <a href="https://doi.org/10.1139/b11-058">doi.org/10.1139/b11-058</a></li>
+      <li><strong>Brejon Lamartiniere, E.; Hoffman, J. I. — Predicting porcini: a decade of sporocarp monitoring reveals the meteorological triggers of <em>Boletus edulis</em> fruiting in central European beech forests.</strong> bioRxiv-Preprint, Dezember 2025. Grundlage der Temperaturangabe. Noch nicht abschließend begutachtet. <a href="https://www.biorxiv.org/content/10.64898/2025.12.12.693895v1.full.pdf">Preprint bei bioRxiv</a></li>
+      <li><strong>Artbeschreibungen der Steinpilzarten</strong> (Sommersteinpilz, Bronzeröhrling, Kiefernsteinpilz, Fichtensteinpilz) mit ihren Baumpartnern und Erscheinungszeiten. <a href="https://fundkorb.de/pilze/boletus-pinophilus-kiefernsteinpilz">fundkorb.de</a> · <a href="https://www.awl.ch/pilze/pilz_dateien/boletus_edulis/steinpilz.htm">awl.ch</a></li>
+    </ul>
+
+    <p class="disclaimer"><strong>Hinweis.</strong> Diese Seite fasst veröffentlichte Fachliteratur und vegetationskundliche Zeigerwerte zusammen. Sie ist keine Fundgarantie. Zeigerpflanzen und Begleitpilze beschreiben Standortbedingungen, keine Fundorte — und regionale Böden, Bestandsgeschichte und Witterung verschieben jede Faustregel. Pilzgebiete zeigt geeignete Wälder, keine geheimen Stellen und keine Bestimmung. Und unabhängig von allem Standortwissen gilt: Iss nie einen Pilz, den du nicht sicher bestimmt hast. Im Zweifel hilft eine Pilzsachverständige oder ein Pilzsachverständiger vor Ort weiter.</p>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="weit">
+    <div>
+      <h3>Pilzgebiete</h3>
+      <p>Pilzkarte für Deutschland<br>Ein Projekt von Sebastian Kring</p>
+    </div>
+    <div>
+      <h3>App</h3>
+      <a href="https://apps.apple.com/de/app/pilzgebiete-pilze-finden/id6801844504">Im App Store laden</a>
+      <a href="https://play.google.com/store/apps/details?id=de.sebastiankring.pilzgebiete">Bei Google Play laden</a>
+    </div>
+    <div>
+      <h3>Waldwissen</h3>
+      <a href="/">Startseite</a>
+      <a href="/caesium/">Cäsium in Wildpilzen</a>
+      <a href="/wachstum/">Wie Steinpilze wachsen</a>
+      <a href="/pfifferling/">Der Echte Pfifferling</a>
+      <a href="/anzeiger/">Anzeiger im Wald</a>
+    </div>
+    <div>
+      <h3>Rechtliches</h3>
+      <a href="https://sites.google.com/view/pilzgebiete-rechtliches-suppor/impressum">Impressum</a>
+      <a href="https://sites.google.com/view/pilzgebiete-rechtliches-suppor/datenschutz">Datenschutzerklärung</a>
+      <a href="https://sites.google.com/view/pilzgebiete-rechtliches-suppor/support">Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
