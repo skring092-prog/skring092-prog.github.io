@@ -1,13 +1,22 @@
 {
   "articles": [
     {
+      "id": "parasol",
+      "title": "Der Parasol sucht keinen Baum",
+      "teaser": "Warum er keinen Wirtsbaum hat und wo er wirklich steht.",
+      "publishedAt": "2026-09-28",
+      "url": "https://pilzgebiete-app.de/parasol/",
+      "imageUrl": "https://pilzgebiete-app.de/parasol/img/card.jpg",
+      "tag": "NEU"
+    },
+    {
       "id": "anzeiger",
       "title": "Steinpilz-Anzeiger",
       "teaser": "Was im Wald wirklich hilft – und was Mythos ist.",
       "publishedAt": "2026-09-20",
       "url": "https://pilzgebiete-app.de/anzeiger/",
       "imageUrl": "https://pilzgebiete-app.de/anzeiger/img/hero-steinpilze.jpg",
-      "tag": "NEU"
+      "tag": "Pilzwissen"
     },
     {
       "id": "pfifferling",
@@ -19,15 +28,6 @@
       "tag": "Pilzwissen"
     },
     {
-      "id": "caesium",
-      "title": "Cäsium in Pilzen",
-      "teaser": "Messwerte verständlich eingeordnet.",
-      "publishedAt": "2026-09-04",
-      "url": "https://pilzgebiete-app.de/caesium/",
-      "imageUrl": "https://pilzgebiete-app.de/caesium/img/hero.jpg",
-      "tag": "Waldwissen"
-    },
-    {
       "id": "steinpilz-wachstum",
       "title": "Wie Steinpilze wachsen",
       "teaser": "Wie Wasser, Bäume und Wetter das Wachstum prägen.",
@@ -35,6 +35,15 @@
       "url": "https://pilzgebiete-app.de/wachstum/",
       "imageUrl": "https://pilzgebiete-app.de/wachstum/img/hero.jpg",
       "tag": "Pilzwissen"
+    },
+    {
+      "id": "caesium",
+      "title": "Cäsium in Pilzen",
+      "teaser": "Messwerte verständlich eingeordnet.",
+      "publishedAt": "2026-09-04",
+      "url": "https://pilzgebiete-app.de/caesium/",
+      "imageUrl": "https://pilzgebiete-app.de/caesium/img/hero.jpg",
+      "tag": "Waldwissen"
     }
   ]
 }
