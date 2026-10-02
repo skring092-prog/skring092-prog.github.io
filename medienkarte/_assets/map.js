@@ -1,4 +1,4 @@
-import {DATA_VERSION,GRADES,parseView,checkedJSON,validateIndex,validatePlaces,PackageLoader,searchPlan,radiusBounds,visibleFeatures,displayLevel,findPlaces,currentLocation,protectionNotice} from './map-core.js';
+import {DATA_VERSION,GRADES,mediaStartView,checkedJSON,validateIndex,validatePlaces,PackageLoader,searchPlan,radiusBounds,visibleFeatures,displayLevel,findPlaces,currentLocation,protectionNotice} from './map-core.js?v=regions-1';
 import {createGoogleMap,MAP_UNAVAILABLE_MESSAGE} from './google-maps.js';
 import {speciesSection} from './species-view.js';
 import {installMapConsent} from './map-consent.js';
@@ -76,7 +76,7 @@ async function sources(){try{const data=await checkedJSON(base+'sources.json');c
  for(const [text,url]of [['GeoNames','https://www.geonames.org/'],['CC BY 4.0','https://creativecommons.org/licenses/by/4.0/'],['Google Maps','https://maps.google.com']]){const link=node('a',text+' ↗');link.href=url;link.target='_blank';link.rel='noopener noreferrer';box.append(link,node('span',' · '));}
  }catch{$('source-content').textContent='Die Quellen konnten nicht geladen werden. Bitte die Seite erneut laden.';}}
 sources();
-function startMap(){const region=document.body.dataset;const start=location.search?parseView(location.search):parseView('?lat='+region.lat+'&lng='+region.lng+'&z='+region.zoom);
+function startMap(){const start=mediaStartView(location.search,document.body.dataset);
  return Promise.all([checkedJSON(base+'index.json').then(validateIndex),createGoogleMap($('map'),start,{onIdle:moved,onSelect:choose,onClear:clearSelection,onError:showFailure})]).then(([loadedIndex,adapter])=>{if(mapFailed)return;index=loadedIndex;map=adapter;loader=new PackageLoader(base,{protectionEnabled:['checked','confirmed-only'].includes(index.protection_status),onChange:queueRender});for(const id of ['show-areas','locate','open-search','open-filters'])$(id).disabled=false;$('load-status').textContent='Gebiete werden vorbereitet …';moved();setTimeout(searchAreas,650);return loadWeather().then(data=>{weather=data;weatherFailure=null;$('weather-stand').textContent='Wetterdaten: 30 vollständige Tage bis '+weather.lastDate+' · aktuelle Bodenfeuchte: '+weather.soilValidAt+' · '+weather.source+' / '+weather.model+' · '+weather.license;map.weather(weather);if(selected){const f=shown.find(x=>x.id===selected);if(f)showDetail(f);}}).catch(error=>{weatherFailure=error;$('weather-stand').textContent='Wetterdaten derzeit nicht verfügbar';});}).catch(showFailure);}
 installMapConsent({get:$,start:startMap,reload:()=>location.reload()});
 function openLinkedDetails(){const target=document.getElementById(location.hash.slice(1));if(target?.tagName==='DETAILS')target.open=true;}

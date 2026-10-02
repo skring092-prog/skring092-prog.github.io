@@ -59,6 +59,40 @@ export function currentLocation(geo=globalThis.navigator?.geolocation){
     geo.getCurrentPosition(p=>resolve({lat:p.coords.latitude,lng:p.coords.longitude}),e=>reject(new Error(e.code===1?'Ohne Standortfreigabe kannst du weiterhin die Ortssuche verwenden.':'Dein Standort konnte nicht ermittelt werden. Bitte versuche es erneut.')),{enableHighAccuracy:false,timeout:10000,maximumAge:60000});});
 }
 export const DEFAULT_VIEW = {lat:51.1,lng:10.4,z:6};
+// The first sixteen presets retain the starting cameras of the existing media links.
+// Additional cities use coordinates from the bundled GeoNames place catalog.
+export const REGION_VIEWS = Object.freeze({
+  augsburg:{lat:48.372,lng:10.899,z:10},
+  berlin:{lat:52.52,lng:13.405,z:10},
+  bremen:{lat:53.0793,lng:8.8017,z:10},
+  dresden:{lat:51.0504,lng:13.7373,z:10},
+  duesseldorf:{lat:51.2277,lng:6.7735,z:10},
+  erfurt:{lat:50.9848,lng:11.0299,z:10},
+  hamburg:{lat:53.5511,lng:9.9937,z:10},
+  hannover:{lat:52.3759,lng:9.732,z:10},
+  kiel:{lat:54.3233,lng:10.1228,z:10},
+  magdeburg:{lat:52.1205,lng:11.6276,z:10},
+  mainz:{lat:49.9929,lng:8.2473,z:10},
+  muenchen:{lat:48.05,lng:11.56,z:10},
+  nuernberg:{lat:49.454,lng:11.078,z:10},
+  potsdam:{lat:52.4,lng:13.06,z:10},
+  regensburg:{lat:49.015,lng:12.102,z:10},
+  saarbruecken:{lat:49.2402,lng:7.0,z:10},
+  schwerin:{lat:53.6355,lng:11.4012,z:10},
+  stuttgart:{lat:48.7758,lng:9.1829,z:10},
+  wiesbaden:{lat:50.0782,lng:8.2398,z:10}
+});
+export function mediaStartView(search,dataset){
+  if(dataset.generic!=='true')return search?parseView(search):parseView('?lat='+dataset.lat+'&lng='+dataset.lng+'&z='+dataset.zoom);
+  const requested=new URLSearchParams(search);
+  const preset=REGION_VIEWS[normalizePlace(requested.get('region')||'')]||DEFAULT_VIEW;
+  const camera=new URLSearchParams({lat:String(preset.lat),lng:String(preset.lng),z:String(preset.z)});
+  for(const key of ['lat','lng','z']){
+    const raw=requested.get(key);
+    if(raw!==null&&/^[+-]?(?:\d+\.?\d*|\.\d+)$/.test(raw.trim()))camera.set(key,raw);
+  }
+  return parseView(camera);
+}
 export function parseView(search) {
   const params = new URLSearchParams(search);
   const value = (key, fallback, min, max) => {
