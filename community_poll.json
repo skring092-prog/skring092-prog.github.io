@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "poll_id": "2026-10",
+  "status": "draft",
+  "title": "Welche Funktion sollen wir als Nächstes prüfen?",
+  "intro": "Die erste Monatsabstimmung startet in Kürze.",
+  "startsAt": "2026-10-09T00:00:00Z",
+  "endsAt": "2026-10-31T23:00:00Z",
+  "options": [
+    {
+      "id": "weitere-pilzprofile",
+      "label": "Weitere Pilzprofile"
+    },
+    {
+      "id": "mehr-waldwissen",
+      "label": "Mehr Waldwissen"
+    }
+  ],
+  "url": "https://pilzgebiete-app.de/mitgestalten/"
+}
