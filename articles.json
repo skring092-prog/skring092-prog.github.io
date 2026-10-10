@@ -1,13 +1,22 @@
 {
   "articles": [
     {
+      "id": "pilzsaison-ende",
+      "title": "Wann endet die Pilzsaison?",
+      "teaser": "Temperaturfenster, Pilzwellen und ein Ausblick auf den Oktober 2026.",
+      "publishedAt": "2026-10-10",
+      "url": "https://pilzgebiete-app.de/saison/",
+      "imageUrl": "https://pilzgebiete-app.de/saison/img/card.jpg",
+      "tag": "NEU"
+    },
+    {
       "id": "parasol",
       "title": "Der Parasol sucht keinen Baum",
       "teaser": "Warum er keinen Wirtsbaum hat und wo er wirklich steht.",
       "publishedAt": "2026-09-28",
       "url": "https://pilzgebiete-app.de/parasol/",
       "imageUrl": "https://pilzgebiete-app.de/parasol/img/card.jpg",
-      "tag": "NEU"
+      "tag": "Pilzwissen"
     },
     {
       "id": "anzeiger",
