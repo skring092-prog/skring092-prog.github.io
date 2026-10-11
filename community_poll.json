@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "poll_id": "2026-10",
-  "status": "draft",
+  "status": "active",
   "title": "Welche Funktion sollen wir als Nächstes prüfen?",
-  "intro": "Die erste Monatsabstimmung startet in Kürze.",
+  "intro": "Oktober-Runde · Abstimmung bis 31. Oktober.",
   "startsAt": "2026-10-09T00:00:00Z",
   "endsAt": "2026-10-31T23:00:00Z",
   "options": [
