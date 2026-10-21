@@ -14,6 +14,14 @@
     {
       "id": "mehr-waldwissen",
       "label": "Mehr Waldwissen"
+    },
+    {
+      "id": "pilzsachverstaendige-kurse",
+      "label": "Pilzsachverständige und Pilzkurse in der Nähe"
+    },
+    {
+      "id": "gebietseignung-wetterdaten",
+      "label": "Gebietseignung anhand aktueller Wetterdaten"
     }
   ],
   "url": "https://pilzgebiete-app.de/mitgestalten/"
