@@ -86,7 +86,11 @@
       var seen = {}, options = j.options.map(function (o) {
         if (!o || typeof o.id !== 'string' || !ID_RE.test(o.id) || seen[o.id]) throw new Error('opt');
         seen[o.id] = 1;
-        return { id: o.id, label: text(o.label, 120) };
+        return {
+          id: o.id,
+          label: text(o.label, 120),
+          originalText: o.originalText == null ? null : text(o.originalText, 200)
+        };
       });
       return {
         id: id, title: text(j.title, 160), status: status, start: start, end: end, options: options,
@@ -119,7 +123,7 @@
       input.value = o.id;
       input.id = 'poll-opt-' + i;
       var span = document.createElement('span');
-      span.textContent = o.label;
+      span.textContent = o.originalText || o.label;
       label.appendChild(input);
       label.appendChild(span);
       ui.options.appendChild(label);
@@ -154,7 +158,7 @@
       var row = document.createElement('div');
       row.className = 'row';
       var name = document.createElement('span');
-      name.textContent = o.label;
+      name.textContent = o.originalText || o.label;
       if (chosen === o.id) {
         var tag = document.createElement('span');
         tag.className = 'mine-tag';

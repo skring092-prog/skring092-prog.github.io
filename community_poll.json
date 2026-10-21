@@ -3,7 +3,7 @@
   "poll_id": "2026-10",
   "status": "active",
   "title": "Welche Funktion sollen wir als Nächstes prüfen?",
-  "intro": "Oktober-Runde · Abstimmung bis 31. Oktober.",
+  "intro": "Oktober-Runde · Abstimmung bis 31. Oktober. Vorschlag #4 im Originalwortlaut: Die Einordnung, ob ein Pilzgebiet A-, B- oder C-Gebiet ist, sollte möglichst aufgrund von Echtzeit(Wetter)daten erfolgen, zumindest in der Premium-Version. A, B und C könnten detaillierter werden",
   "startsAt": "2026-10-09T00:00:00Z",
   "endsAt": "2026-10-31T23:00:00Z",
   "options": [
@@ -18,6 +18,11 @@
     {
       "id": "pilzsachverstaendige-kurse",
       "label": "Pilzsachverständige und Pilzkurse in der Nähe"
+    },
+    {
+      "id": "gebietseignung-wetterdaten",
+      "label": "Vorschlag #4",
+      "originalText": "Die Einordnung, ob ein Pilzgebiet A-, B- oder C-Gebiet ist, sollte möglichst aufgrund von Echtzeit(Wetter)daten erfolgen, zumindest in der Premium-Version. A, B und C könnten detaillierter werden"
     }
   ],
   "url": "https://pilzgebiete-app.de/mitgestalten/"
