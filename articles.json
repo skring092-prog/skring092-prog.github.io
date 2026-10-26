@@ -1,13 +1,22 @@
 {
   "articles": [
     {
+      "id": "spaetherbst",
+      "title": "Letzte Runde im Wald",
+      "teaser": "Woran du das Saisonende erkennst und was jetzt noch wächst.",
+      "publishedAt": "2026-10-26",
+      "url": "https://pilzgebiete-app.de/spaetherbst/",
+      "imageUrl": "https://pilzgebiete-app.de/spaetherbst/img/card.jpg",
+      "tag": "NEU"
+    },
+    {
       "id": "pilzsaison-ende",
       "title": "Wann endet die Pilzsaison?",
       "teaser": "Temperaturfenster, Pilzwellen und ein Ausblick auf den Oktober 2026.",
       "publishedAt": "2026-10-10",
       "url": "https://pilzgebiete-app.de/saison/",
       "imageUrl": "https://pilzgebiete-app.de/saison/img/card.jpg",
-      "tag": "NEU"
+      "tag": "Waldwissen"
     },
     {
       "id": "parasol",
